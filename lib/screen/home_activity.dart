@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:youga_application/screen/youga_class.dart';
 
 class HomeActivity extends StatelessWidget{
   @override
@@ -21,7 +22,7 @@ class HomeActivity extends StatelessWidget{
       body: SingleChildScrollView(
         clipBehavior: Clip.none,
         child: Padding(
-          padding: EdgeInsets.only(left: 22,right: 22,top: 45),
+          padding: EdgeInsets.only(left: 22,right: 22,top: 30  ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -48,7 +49,7 @@ class HomeActivity extends StatelessWidget{
                           7.0), // Adjust the radius value as needed
                     ),
                     child: Container(
-                      height: MediaQuery.of(context).size.height/8.5,
+                      height: MediaQuery.of(context).size.height/9,
                       width: MediaQuery.of(context).size.width/1.2,
                       decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7)),color: Colors.white),
                       child: Padding(
@@ -137,226 +138,251 @@ decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
                 ),
               ),
               SizedBox(height: 20,),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      7.0), // Adjust the radius value as needed
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height/7.2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Youga()));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        7.0), // Adjust the radius value as needed
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height/9.2,
-                          width: MediaQuery.of(context).size.width/4.6,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/7.2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10,right: 20),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height/9.2,
+                            width: MediaQuery.of(context).size.width/4.6,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
 
+                            ),
                           ),
-                        ),
-                        VerticalDivider(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20,right: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
-                              SizedBox(height: 10,),
-                              Text('Explore your inner landscape'),
-                              SizedBox(height: 10,),
-                              Text('Through Youga posess'),
-                            ],
-                          ),
-                        )
-                      ],
+                          VerticalDivider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                                SizedBox(height: 10,),
+                                Text('Explore your inner landscape'),
+                                SizedBox(height: 10,),
+                                Text('Through Youga posess'),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 20,),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      7.0), // Adjust the radius value as needed
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height/7.2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Youga()));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        7.0), // Adjust the radius value as needed
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height/9.2,
-                          width: MediaQuery.of(context).size.width/4.6,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/7.2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10,right: 20),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height/9.2,
+                            width: MediaQuery.of(context).size.width/4.6,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
 
+                            ),
                           ),
-                        ),
-                        VerticalDivider(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20,right: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
-                              SizedBox(height: 10,),
-                              Text('Explore your inner landscape'),
-                              SizedBox(height: 10,),
-                              Text('Through Youga posess'),
-                            ],
-                          ),
-                        )
-                      ],
+                          VerticalDivider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                                SizedBox(height: 10,),
+                                Text('Explore your inner landscape'),
+                                SizedBox(height: 10,),
+                                Text('Through Youga posess'),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 20,),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      7.0), // Adjust the radius value as needed
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height/7.2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Youga()));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        7.0), // Adjust the radius value as needed
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height/9.2,
-                          width: MediaQuery.of(context).size.width/4.6,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/7.2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10,right: 20),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height/9.2,
+                            width: MediaQuery.of(context).size.width/4.6,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
 
+                            ),
                           ),
-                        ),
-                        VerticalDivider(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20,right: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
-                              SizedBox(height: 10,),
-                              Text('Explore your inner landscape'),
-                              SizedBox(height: 10,),
-                              Text('Through Youga posess'),
-                            ],
-                          ),
-                        )
-                      ],
+                          VerticalDivider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                                SizedBox(height: 10,),
+                                Text('Explore your inner landscape'),
+                                SizedBox(height: 10,),
+                                Text('Through Youga posess'),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 20,),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      7.0), // Adjust the radius value as needed
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height/7.2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Youga()));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        7.0), // Adjust the radius value as needed
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height/9.2,
-                          width: MediaQuery.of(context).size.width/4.6,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/7.2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10,right: 20),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height/9.2,
+                            width: MediaQuery.of(context).size.width/4.6,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
 
+                            ),
                           ),
-                        ),
-                        VerticalDivider(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20,right: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
-                              SizedBox(height: 10,),
-                              Text('Explore your inner landscape'),
-                              SizedBox(height: 10,),
-                              Text('Through Youga posess'),
-                            ],
-                          ),
-                        )
-                      ],
+                          VerticalDivider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                                SizedBox(height: 10,),
+                                Text('Explore your inner landscape'),
+                                SizedBox(height: 10,),
+                                Text('Through Youga posess'),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               SizedBox(height: 20,),
-              Card(
-                elevation: 5,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(
-                      7.0), // Adjust the radius value as needed
-                ),
-                child: Container(
-                  height: MediaQuery.of(context).size.height/7.2,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Youga()));
+                },
+                child: Card(
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        7.0), // Adjust the radius value as needed
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10,right: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height/9.2,
-                          width: MediaQuery.of(context).size.width/4.6,
-                          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(40)),
-                            child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height/7.2,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 10,right: 20),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height/9.2,
+                            width: MediaQuery.of(context).size.width/4.6,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(40))),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                              child: Image.network('https://images.pexels.com/photos/4024906/pexels-photo-4024906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',fit: BoxFit.cover,),
 
+                            ),
                           ),
-                        ),
-                        VerticalDivider(),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20,right: 10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
-                              SizedBox(height: 10,),
-                              Text('Explore your inner landscape'),
-                              SizedBox(height: 10,),
-                              Text('Through Youga posess'),
-                            ],
-                          ),
-                        )
-                      ],
+                          VerticalDivider(),
+                          Padding(
+                            padding: EdgeInsets.only(top: 20,right: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Helath Youga',style: TextStyle(fontSize: 26,fontWeight: FontWeight.w600),),
+                                SizedBox(height: 10,),
+                                Text('Explore your inner landscape'),
+                                SizedBox(height: 10,),
+                                Text('Through Youga posess'),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
