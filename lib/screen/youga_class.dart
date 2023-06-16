@@ -133,7 +133,6 @@ class Youga extends StatelessWidget {
                                   ),
                                 ],
                               ),
-
                             ],
                           ),
                         ),
